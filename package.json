@@ -1,0 +1,18 @@
+{
+  "name": "gerar-request",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.25.0",
+    "dotenv": "^8.2.0",
+    "express": "4.18.2",
+    "gera-token-4p": "file:./src/utils/gerar-token-4p"
+  }
+}
