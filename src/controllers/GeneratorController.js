@@ -12,9 +12,12 @@ class GeneratorController {
       const result = await generatorService.getProcessLoginBody(cpf, password, authorization);
       return res.status(200).send(result);
     } catch (err) {
+      if (err.message.includes('ETIMEDOUT') || err.message.includes('ECONNREFUSED')) {
+        err.message = 'Probably your VPN is down or your .ENV is badly configured';
+      }
       console.error('Error: ' + err.message);
       const status = err.status || 500;
-      if (err.message.includes('ETIMEDOUT')) err.message = 'Probably your VPN is down';
+
       res.status(status).send({
         message: err.message,
         status,

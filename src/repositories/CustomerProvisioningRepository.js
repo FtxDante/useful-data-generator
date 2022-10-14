@@ -12,7 +12,7 @@ class CustomerProvisioningRepository {
   }
 
   async getCustomerProvisioning(userID) {
-    const url = `http://10.129.163.190:7010/CustomerProvisioning/searchUser`;
+    const url = `${process.env.HOST_CUSTOMER_PROVISIONING}/CustomerProvisioning/searchUser`;
     try {
       const { data } = await this.axios.post(
         url,
