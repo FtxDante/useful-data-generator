@@ -20,7 +20,7 @@ class CustomerProvisioningRepository {
         {
           httpsAgent: this.httpsAgent,
           headers: {
-            Authorization: 'Basic c3ZjX2NwdXNlcm12YXBwOjc2ZGo2NGxrczlXdDRnODk=',
+            Authorization: `Basic ${process.env.AUTH_CUSTOMER_PROVISIONING}`,
           },
         }
       );
