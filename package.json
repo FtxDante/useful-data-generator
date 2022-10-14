@@ -5,15 +5,16 @@
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "0.25.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "8.2.0",
     "express": "4.18.2",
-    "gera-token-4p": "file:./src/utils/gerar-token-4p"
+    "nodemon": "1.17.4"
   }
 }
